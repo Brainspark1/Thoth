@@ -42,7 +42,7 @@ while True:
     # Get the last message from the model
     for message in reversed(result["messages"]):
         if hasattr(message, "type") and message.type == "ai" and message.content:
-            print("\nAI:", message.content)
+            print("\nThoth:", message.content)
             break
     print()
 
