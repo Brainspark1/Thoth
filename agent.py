@@ -26,7 +26,7 @@ agent = create_agent(
 Think step by step."""
 )
 
-print("\n🔎 Research AI Agent Ready")
+print("\nThoth")
 print("Type 'exit' to quit\n")
 
 while True:
