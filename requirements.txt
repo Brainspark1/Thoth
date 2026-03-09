@@ -1,7 +1,20 @@
-langchain 
+# GUI
+customtkinter
+
+# Core LangChain
+langchain
+langchain-core
+langchain-community
+langchain-ollama
+
+# Ollama & Search
+ollama
+ddgs
+
+# Existing dependencies
 wikipedia 
-langchain-community 
 langchain-openai 
 langchain-anthropic 
 python-dotenv 
 pydantic
+
