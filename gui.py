@@ -49,12 +49,22 @@ class ThothGUI:
         ctk.set_appearance_mode("dark")
         ctk.set_default_color_theme("blue")
         
-        # Create main window
+        # Creating main frame
         self.root = ctk.CTk()
         self.root.title("Thoth")
-        self.root.geometry("800x350")
+
+        window_width = 800
+        window_height = 350
+
+        screen_width = self.root.winfo_screenwidth()
+        screen_height = self.root.winfo_screenheight()
+
+        x = int((screen_width / 2) - (window_width / 2))
+        y = int((screen_height / 2) - (window_height / 2))
+
+        self.root.geometry(f"{window_width}x{window_height}+{x}+{y}")
         self.root.minsize(600, 400)
-        
+                
         # Configure grid layout
         self.root.grid_rowconfigure(0, weight=1)
         self.root.grid_columnconfigure(0, weight=1)
@@ -95,7 +105,7 @@ class ThothGUI:
         # Subtitle
         subtitle_label = ctk.CTkLabel(
             header_frame,
-            text="AI Research Assistant",
+            text="Research Assistant",
             font=ctk.CTkFont(size=12),
             text_color="gray"
         )
